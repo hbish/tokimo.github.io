@@ -1,0 +1,61 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= @getPreparedTitle() %></title>
+    
+    <meta name="description" content="Creating software" />
+    
+    <meta name="author" content="Tokimo Labs" />
+    <meta name="copyright" content="Tokimo Labs Copyright (c) 2015" />
+    <%- @getBlock("meta").toHTML() %>
+
+    <%- @getBlock("styles").add(["/styles/app.css", "/styles/style.css"]).toHTML() %>
+    <%- @getBlock("scripts").add(["vendor/modernizr/modernizr.js"]).toHTML() %>
+  </head>
+  <body>
+    
+    <link href="http://fonts.googleapis.com/css?family=Raleway:600,400,200" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+    <div class="row">
+        <div class="small-12 medium-4 large-6 columns namelogo">
+          <h1><%= @site.title %></h1>
+        </div>
+        <div class="small-12 medium-8 large-6 columns">
+            <div class="nav-bar">
+
+            </div>
+        </div>
+    </div>
+        
+    <div class="hero">
+      <div class="row">
+        <div class="large-12 columns intro-text">
+            <p>Coming Soon...</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="row">
+      <div class="large-12 columns">
+        <div class="row">
+          <div class="large-6 columns">
+            <p>Tokimo Labs © 2015</p>
+          </div>
+          <div class="large-6 columns">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.write('<script src=' + ('__proto__' in {} ? 'vendor/zepto/zepto' : 'vendor/jquery/dist/jquery') + '.js><\/script>')
+    </script>
+
+    <%- @getBlock("scripts").add(["vendor/jquery/dist/jquery.min.js", "vendor/foundation/js/foundation.min.js", "scripts/app.js", "scripts/script.js"]).toHTML() %>
+
+  </body>
+</html>
